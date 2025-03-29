@@ -14,7 +14,9 @@ function App() {
   return (
     <div className="font-sans bg-gray-900 text-gray-100 min-h-screen">
       {/* Hero Section */}
+      
       <section className="relative min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center px-4 py-20">
+      <div className='bg-black/20 shadow-md p-12 border-2 rounded-xl border-sky-500/50 '>
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Text Content */}
           <motion.div
@@ -109,7 +111,9 @@ function App() {
           <div className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-purple-900 opacity-20 blur-3xl animate-float"></div>
           <div className="absolute bottom-1/3 right-1/4 w-40 h-40 rounded-full bg-blue-900 opacity-20 blur-3xl animate-float-delay"></div>
         </div>
+        </div>
       </section>
+
 
       {/* Stats Section */}
       <section className="py-24 bg-gray-800">
