@@ -477,11 +477,11 @@ function App() {
               <div className="bg-gradient-to-br from-blue-900 to-purple-900 p-1 rounded-2xl shadow-2xl">
                 <div className="bg-gray-900 p-8 rounded-xl">
                   <div className="flex items-center space-x-6 mb-10">
-                    <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-blue-500 shadow-lg">
+                    <div className="w-64 h-64 rounded-full object-top overflow-hidden border-4 border-blue-500 shadow-lg">
                       <img 
                         src={doctorImage} 
                         alt="Dr. Sai Vigneshvar"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-top"
                       />
                     </div>
                     <div>
@@ -604,20 +604,6 @@ function App() {
           <p className="text-gray-500 text-sm">Disclaimer: This website is for informational purposes only and does not replace professional medical advice.</p>
         </div>
       </footer>
-
-      {/* Floating doctor image (optional) */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.1 }}
-        transition={{ delay: 1 }}
-        className="fixed bottom-10 right-10 w-40 h-40 rounded-full overflow-hidden border-4 border-blue-500 shadow-2xl z-0 pointer-events-none"
-      >
-        <img 
-          src={doctorImage} 
-          alt="Dr. Sai Vigneshvar"
-          className="w-full h-full object-cover"
-        />
-      </motion.div>
     </div>
   );
 }
