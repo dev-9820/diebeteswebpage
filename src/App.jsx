@@ -98,16 +98,19 @@ function App() {
   {/* Stats Section */}
   <div className="bg-yellow-500 w-full mb-10  grid grid-cols-1 md:grid-cols-3 gap-4 text-black text-center mt-6 rounded-lg md:rounded-none">
     <div className="p-6 rounded-md">
-      <h3 className="font-bold text-5xl md:text-7xl">5 +</h3>
+    <p>For over</p>
+      <h3 className="font-bold text-5xl md:text-7xl">5+</h3>
       <p className='text-lg md:text-xl'>Years</p>
     </div>
     <div className="p-6 rounded-md">
+    <p>I've Treated</p>
       <h3 className="font-bold text-5xl md:text-7xl">10,000+</h3>
       <p className='text-lg md:text-xl'>Diabetic patients treated</p>
     </div>
     <div className="p-6 rounded-md">
+      <p>To Reduce HbA1c from 10%</p>
       <h3 className="font-bold text-5xl md:text-7xl">To ≤6.5%</h3>
-      <p className='text-lg md:text-xl'>Effortlessly reduce HbA1c</p>
+      <p className='text-lg md:text-xl'>Effortlessly</p>
     </div>
   </div>
 </section>
@@ -314,7 +317,7 @@ function App() {
             variants={fadeIn}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl max-w-3/4 justify-self-center font-semibold text-center text-white mb-20">
+            <h2 className="text-4xl md:text-5xl md:max-w-3/4 justify-self-center font-semibold text-center text-white mb-20">
               What <span className='text-yellow-500'>Will Change</span> After You Start with Us?
             </h2>
             
@@ -431,18 +434,18 @@ function App() {
 <section className="py-24 bg-[#121A56] text-white relative">
   <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
     {/* Left Text Section */}
-    <div className="md:w-1/2">
+    <div className="md:w-1/2 ">
       <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Meet your <span className="text-yellow-400">Doctor</span></h2>
-      <p className="text-lg mb-4">
+      <p className="text-lg mb-4 text-justify">
         I'm Dr. Sai Vigneshvar, your dedicated diabetes specialist, here to guide you toward better health and well-being. Whether you're newly diagnosed with diabetes, managing it for years, or just looking for ways to improve your blood sugar control, I specialize in helping people like you regain control over their health and live a life free from diabetes-related worries.
       </p>
-      <p className="text-lg mb-4">
+      <p className="text-lg mb-4 text-justify">
         With a Simple Diabetes Care Plan, I empower you to unlock your full health potential. Imagine transforming your daily routine into a series of small, manageable steps that lead to better blood sugar levels, increased energy, and a healthier lifestyle. All while making sustainable changes that fit easily into your busy life.
       </p>
-      <p className="text-lg mb-6">
+      <p className="text-lg mb-4 text-justify">
         Together, we'll rewrite your health story. Join me on this transformative journey and let's create a path to healthier living, free from the fear and complications of diabetes.
       </p>
-      <button className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold text-lg hover:bg-yellow-500 transition">
+      <button className="bg-yellow-400  text-black px-6 py-3 rounded-lg font-bold text-lg hover:bg-yellow-500 transition">
         Book a Consultation
       </button>
     </div>
@@ -458,7 +461,7 @@ function App() {
   </div>
 
   {/* Credentials Section */}
-  <div className="max-w-3xl mx-5 md:absolute right-44 -translate-y-44 bg-white text-black rounded-lg p-6 mt-8 shadow-lg flex flex-col space-y-4">
+  <div className="max-w-3xl mx-5 md:absolute -mb-64 right-44 -translate-y-44 bg-white text-black rounded-lg p-6 mt-8 shadow-lg flex flex-col space-y-4">
     <ul className="space-y-3 text-lg">
       <li className="flex items-center gap-3">
         <span className="text-yellow-500 font-bold">•</span> <span><strong>5+ Years of Experience</strong> in treating diabetes</span>
