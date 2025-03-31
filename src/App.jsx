@@ -50,58 +50,67 @@ function App() {
 
   return (
     <div className="font-sans bg-gray-900 text-gray-100 min-h-screen">
-      {/* Hero Section */}
-      <section className="mx-64 py-64 items-center h-screen">
-        <motion.div 
-          initial={{ opacity: 0, y: -50 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.8 }}
-          className="bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 p-10 rounded-xl text-center shadow-lg"
-        >
-          <h1 className="text-8xl font-bold">Take Control of <p className="text-yellow-500">Your Diabetes</p></h1>
-          <p className="text-gray-300 text-xl font-semibold mt-4">Get Started with a Personal Consultation</p>
-          <div className="mt-6 mx-64 grid grid-cols-2 gap-4">
-            <input type="text" placeholder="Enter Name" className="p-3 rounded-md bg-gray-700 text-white" />
-            <input type="text" placeholder="Enter Contact Number" className="p-3 rounded-md bg-gray-700 text-white" />
-            <input type="text" placeholder="Enter Place" className="p-3 rounded-md bg-gray-700 text-white" />
-            <input type="text" placeholder="Duration of Diabetes" className="p-3 rounded-md bg-gray-700 text-white" />
-          </div>
-          <button className="mt-6 bg-yellow-500 text-black px-6 py-3 rounded-md font-bold hover:bg-yellow-600">Book an Appointment</button>
-        </motion.div>
-      </section>
+     {/* Hero Section */}
+<section className="px-6 py-32 md:py-64 flex items-center min-h-screen">
+  <motion.div 
+    initial={{ opacity: 0, y: -50 }} 
+    animate={{ opacity: 1, y: 0 }} 
+    transition={{ duration: 0.8 }}
+    className="bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 p-10 rounded-xl text-center shadow-lg w-full max-w-5xl mx-auto"
+  >
+    <h1 className="text-4xl md:text-8xl font-bold">
+      Take Control of <span className="text-yellow-500">Your Diabetes</span>
+    </h1>
+    <p className="text-gray-300 text-lg md:text-xl font-semibold mt-4">
+      Get Started with a Personal Consultation
+    </p>
+    <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <input type="text" placeholder="Enter Name" className="p-3 rounded-md bg-gray-700 text-white w-full" />
+      <input type="text" placeholder="Enter Contact Number" className="p-3 rounded-md bg-gray-700 text-white w-full" />
+      <input type="text" placeholder="Enter Place" className="p-3 rounded-md bg-gray-700 text-white w-full" />
+      <input type="text" placeholder="Duration of Diabetes" className="p-3 rounded-md bg-gray-700 text-white w-full" />
+    </div>
+    <button className="mt-6 bg-yellow-500 text-black px-6 py-3 rounded-md font-bold hover:bg-yellow-600">
+      Book an Appointment
+    </button>
+  </motion.div>
+</section>
       
       {/* About Doctor Section */}
-      <section className="flex flex-col items-center bg-gray-800 pt-10 text-center">
-        <motion.div 
-          initial={{ opacity: 0, y: 50 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.8 }}
-          className="bg-gray-900 pl-6 border-b-3 border-yellow-500 rounded-xl w-3/4 max-w-3xl"
-        >
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="text-left md:w-2/3">
-              <h2 className="text-3xl font-bold">By Dr. Sai Vigneshvar</h2>
-              <p className="text-gray-400 text-xl font-semibold mt-2">Consultant - Internal medicine and advanced diabetology</p>
-            </div>
-            <img src={doctorImage} alt="Doctor" className="w-64 h-64 object-cover object-top" />
-          </div>
-        </motion.div>
-        
-        <div className="bg-yellow-500  w-full justify-between px-63 flex mt-6 w-full  text-black">
-          <div className="bg-yellow-500 p-6 rounded-md text-center">
-            <h3 className="font-bold text-7xl">5 +</h3>
-            <p className='text-xl'>Years</p>
-          </div>
-          <div className="bg-yellow-500 p-6 rounded-md text-center">
-            <h3 className="font-bold text-7xl">10,000+</h3>
-            <p className='text-xl'>Diabetic patients treated</p>
-          </div>
-          <div className="bg-yellow-500 p-6 rounded-md text-center">
-            <h3 className="font-bold text-7xl">To ≤6.5%</h3>
-            <p className='text-xl'>Effortlessly reduce HbA1c</p>
-          </div>
-        </div>
-      </section>
+<section className="flex flex-col items-center bg-gray-800 pt-10 text-center px-6 md:px-0">
+  <motion.div 
+    initial={{ opacity: 0, y: 50 }} 
+    animate={{ opacity: 1, y: 0 }} 
+    transition={{ duration: 0.8 }}
+    className="bg-gray-900 border-b-4 border-yellow-500 rounded-xl w-full max-w-3xl p-6"
+  >
+    <div className="flex flex-col md:flex-row items-center md:justify-between">
+      <div className="text-center md:text-left md:w-2/3">
+        <h2 className="text-2xl md:text-3xl font-bold">By Dr. Sai Vigneshvar</h2>
+        <p className="text-gray-400 text-lg md:text-xl font-semibold mt-2">
+          Consultant - Internal medicine and advanced diabetology
+        </p>
+      </div>
+      <img src={doctorImage} alt="Doctor" className="w-48 h-48 md:w-64 md:h-64 object-cover object-top mt-4 md:mt-0" />
+    </div>
+  </motion.div>
+
+  {/* Stats Section */}
+  <div className="bg-yellow-500 w-full mb-10  grid grid-cols-1 md:grid-cols-3 gap-4 text-black text-center mt-6 rounded-lg md:rounded-none">
+    <div className="p-6 rounded-md">
+      <h3 className="font-bold text-5xl md:text-7xl">5 +</h3>
+      <p className='text-lg md:text-xl'>Years</p>
+    </div>
+    <div className="p-6 rounded-md">
+      <h3 className="font-bold text-5xl md:text-7xl">10,000+</h3>
+      <p className='text-lg md:text-xl'>Diabetic patients treated</p>
+    </div>
+    <div className="p-6 rounded-md">
+      <h3 className="font-bold text-5xl md:text-7xl">To ≤6.5%</h3>
+      <p className='text-lg md:text-xl'>Effortlessly reduce HbA1c</p>
+    </div>
+  </div>
+</section>
 
 
     
@@ -113,7 +122,7 @@ function App() {
             whileInView="visible"
             variants={fadeIn}
             viewport={{ once: true }}
-            className="text-5xl md:text-3xl font-semibold text-center text-transparent bg-clip-text bg-white mb-20"
+            className="md:text-5xl text-2xl font-semibold text-center text-transparent bg-clip-text bg-white mb-20"
           >
             Now, I’ve Created
             <p className='text-5xl'>The Simple <span className='text-yellow-500 font-bold'>Diabetes Care Plan</span></p>
@@ -221,77 +230,80 @@ function App() {
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            variants={fadeIn}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400  to-yellow-900 mb-6">What We Offer</h2>
-            
-            
-            <div className="grid grid-cols-1 md:grid-cols-1 gap-8 mt-12">
-  {[
-    {
-      title: "Personalized Diabetes Management",
-      desc: "We focus on tailored care plans that fit your unique health needs, ensuring better control over blood sugar levels and overall wellness.",
-      icon: FaUserMd
-    },
-    {
-      title: "Blood Sugar Optimization",
-      desc: "Through innovative methods, we help reduce blood sugar levels naturally, making lasting improvements to your health.",
-      icon: FaChartLine
-    },
-    {
-      title: "Lifestyle & Diet Guidance",
-      desc: "We provide expert advice on nutrition, exercise, and mental health to support a holistic approach to managing diabetes.",
-      icon: FaAppleAlt
-    },
-    {
-      title: "Online Consultations & Follow-ups",
-      desc: "Book appointments and get consultations from the comfort of your home, with regular follow-ups to monitor your progress.",
-      icon: FaLaptopMedical
-    }
-  ].map((service, index) => {
-    const IconComponent = service.icon;
-    
-    return (
-      <motion.div
-        key={index}
-        initial="hidden"
-        whileInView="visible"
-        variants={fadeIn}
-        viewport={{ once: true }}
-        transition={{ delay: index * 0.1 }}
-        whileHover={{ y: -5 }}
-        className="bg-gradient-to-r from-yellow-500 to-white max-w-2/3 justify-self-center flex gap-10 p-8 rounded-2xl shadow-xl border border-gray-700 hover:border-yellow-500 transition-all"
-      >
-        <div className="text-4xl my-auto mb-6 text-black">
-          <IconComponent className="h-10 w-10" />
-        </div>
-        <div>
-        <h3 className="text-2xl font-bold text-black mb-4">{service.title}</h3>
-        <p className="text-black">{service.desc}</p>
-        </div>
-      </motion.div>
-    );
-  })}
-</div>
-            
-            <div className="text-center mt-16">
-              <motion.button
-                whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(107, 128, 32, 0.29)" }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-yellow-400/50 to-yellow-900 text-white px-10 py-4 rounded-xl font-bold text-xl shadow-xl hover:shadow-2xl transition-all"
-              >
-                Book a Consultation
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+<section className="py-16 md:py-24 bg-gray-900">
+  <div className="max-w-7xl mx-auto px-6">
+    <motion.div 
+      initial="hidden"
+      whileInView="visible"
+      variants={fadeIn}
+      viewport={{ once: true }}
+    >
+      <h2 className="text-3xl md:text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-900 mb-8">
+        What We Offer
+      </h2>
+
+      {/* Services Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 mt-10">
+        {[
+          {
+            title: "Personalized Diabetes Management",
+            desc: "We focus on tailored care plans that fit your unique health needs, ensuring better control over blood sugar levels and overall wellness.",
+            icon: FaUserMd
+          },
+          {
+            title: "Blood Sugar Optimization",
+            desc: "Through innovative methods, we help reduce blood sugar levels naturally, making lasting improvements to your health.",
+            icon: FaChartLine
+          },
+          {
+            title: "Lifestyle & Diet Guidance",
+            desc: "We provide expert advice on nutrition, exercise, and mental health to support a holistic approach to managing diabetes.",
+            icon: FaAppleAlt
+          },
+          {
+            title: "Online Consultations & Follow-ups",
+            desc: "Book appointments and get consultations from the comfort of your home, with regular follow-ups to monitor your progress.",
+            icon: FaLaptopMedical
+          }
+        ].map((service, index) => {
+          const IconComponent = service.icon;
+
+          return (
+            <motion.div
+              key={index}
+              initial="hidden"
+              whileInView="visible"
+              variants={fadeIn}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              whileHover={{ y: -5 }}
+              className="bg-gradient-to-r from-yellow-500 to-white flex gap-6 md:gap-10 p-6 md:p-8 rounded-2xl shadow-xl border border-gray-700 hover:border-yellow-500 transition-all w-full"
+            >
+              <div className="text-3xl md:text-4xl text-black">
+                <IconComponent className="h-8 w-8 md:h-10 md:w-10" />
+              </div>
+              <div>
+                <h3 className="text-xl md:text-2xl font-bold text-black mb-2">{service.title}</h3>
+                <p className="text-black text-sm md:text-base">{service.desc}</p>
+              </div>
+            </motion.div>
+          );
+        })}
+      </div>
+
+      {/* Book Consultation Button */}
+      <div className="text-center mt-12 md:mt-16">
+        <motion.button
+          whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(107, 128, 32, 0.29)" }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-gradient-to-r from-yellow-400/50 to-yellow-900 text-white px-6 md:px-10 py-3 md:py-4 rounded-xl font-bold text-lg md:text-xl shadow-xl hover:shadow-2xl transition-all"
+        >
+          Book a Consultation
+        </motion.button>
+      </div>
+    </motion.div>
+  </div>
+</section>
 
       {/* Comparison Section */}
       <section className="py-24 bg-gray-800">
@@ -366,7 +378,7 @@ function App() {
             <div className="mt-10">
               <div>
                
-                <ul className="space-y-6 ml-32">
+                <ul className="space-y-6 md:ml-32">
                   {[
                     "Have Type 1 or Type 2 diabetes and struggle to keep their blood sugar under control.",
                     "Are dealing with high HbA/c levels and are concerned about the long-term effects of diabetes",
@@ -388,12 +400,12 @@ function App() {
                 </ul>
               </div>
               
-              <h3 className="text-3xl text-center mt-12 max-w-4xl justify-self-center text-5xl font-bold text-white mb-8">
+              <h3 className="md:text-3xl text-3xl text-center mt-12 max-w-4xl justify-self-center  font-bold text-white mb-8">
               I Want You to Know the Cost of Ignoring Your Health
                 </h3>
               <div>
                 
-                <ul className="space-y-6 ml-32">
+                <ul className="space-y-6 md:ml-32">
                   {[
                     "Letting high blood sugar and diabetes complications control your life.",
                     "Ignoring uncontrolled HbA/c and the long-term risks to your organs and overall health.",
@@ -446,7 +458,7 @@ function App() {
   </div>
 
   {/* Credentials Section */}
-  <div className="max-w-3xl absolute right-44 -translate-y-44 bg-white text-black rounded-lg p-6 mt-8 shadow-lg flex flex-col space-y-4">
+  <div className="max-w-3xl mx-5 md:absolute right-44 -translate-y-44 bg-white text-black rounded-lg p-6 mt-8 shadow-lg flex flex-col space-y-4">
     <ul className="space-y-3 text-lg">
       <li className="flex items-center gap-3">
         <span className="text-yellow-500 font-bold">•</span> <span><strong>5+ Years of Experience</strong> in treating diabetes</span>
