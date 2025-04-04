@@ -10,7 +10,7 @@ export default function CRM() {
 
   const fetchAppointments = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/consultations");
+      const res = await axios.get("https://diabetesbackend.onrender.com/api/consultations");
       setAppointments(res.data);
     } catch (error) {
       console.error("Error fetching data", error);
@@ -21,7 +21,7 @@ export default function CRM() {
     if (!window.confirm("Are you sure you want to delete this record?")) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/consultations/${id}`);
+      await axios.delete(`https://diabetesbackend.onrender.com/api/consultations/${id}`);
       setAppointments(appointments.filter(app => app._id !== id));
     } catch (error) {
       console.error("Error deleting record", error);

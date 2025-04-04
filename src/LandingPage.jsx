@@ -63,7 +63,7 @@ function LandingPage() {
     setMessage(""); // Reset message
 
     try {
-      const res = await axios.post("http://localhost:5000/api/consultations", formData);
+      const res = await axios.post("https://diabetesbackend.onrender.com/api/consultations", formData);
       setMessage("Appointment booked successfully!");
       setFormData({ name: "", contact: "", place: "", duration: "" }); // Clear form
     } catch (error) {
