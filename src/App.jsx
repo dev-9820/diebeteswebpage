@@ -7,8 +7,15 @@ import { GiHealthNormal } from "react-icons/gi";
 import { RiMentalHealthFill } from "react-icons/ri";
 import { FaUserMd, FaChartLine, FaAppleAlt, FaLaptopMedical } from "react-icons/fa";
 import { FaPlus, FaTimes } from "react-icons/fa";
-
-
+import icon1 from "./assets/icon1.png"
+import icon2 from "./assets/icon2.png"
+import icon3 from "./assets/icon3.png"
+import icon4 from "./assets/icon4.png"
+import icon5 from "./assets/icon5.png"
+import icon6 from "./assets/icon6.png"
+import icon7 from "./assets/icon7.png"
+import icon8 from "./assets/icon8.png"
+import React from 'react';
 const faqs = [
   {
     question: "What are the prerequisites for enrolling in the law course?",
@@ -49,26 +56,26 @@ function App() {
   };
 
   return (
-    <div className="font-sans bg-gray-900 text-gray-100 min-h-screen">
+    <div className="font-sans bg-[#08081b] text-gray-100 min-h-screen">
      {/* Hero Section */}
-<section className="px-6 py-32 md:py-64 flex items-center min-h-screen">
+<section className="px-6 py-32 md:py-12 flex items-center min-h-screen">
   <motion.div 
     initial={{ opacity: 0, y: -50 }} 
     animate={{ opacity: 1, y: 0 }} 
     transition={{ duration: 0.8 }}
-    className="bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 p-10 rounded-xl text-center shadow-lg w-full max-w-5xl mx-auto"
+    className="bg-gradient-to-r from-gray-900 via-[#08081b] to-gray-900 border-t border-gray-500 p-10 rounded-xl text-center shadow-lg w-full max-w-5xl mx-auto"
   >
-    <h1 className="text-4xl md:text-8xl font-bold">
-      Take Control of <span className="text-yellow-500">Your Diabetes</span>
+    <h1 className="text-4xl md:text-8xl font-semibold">
+      Take Control of <p className="text-yellow-500">Your Diabetes</p>
     </h1>
-    <p className="text-gray-300 text-lg md:text-xl font-semibold mt-4">
+    <p className="text-gray-300 text-lg md:text-3xl my-8 ">
       Get Started with a Personal Consultation
     </p>
-    <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-      <input type="text" placeholder="Enter Name" className="p-3 rounded-md bg-gray-700 text-white w-full" />
-      <input type="text" placeholder="Enter Contact Number" className="p-3 rounded-md bg-gray-700 text-white w-full" />
-      <input type="text" placeholder="Enter Place" className="p-3 rounded-md bg-gray-700 text-white w-full" />
-      <input type="text" placeholder="Duration of Diabetes" className="p-3 rounded-md bg-gray-700 text-white w-full" />
+    <div className="mt-6 md:mx-24 grid grid-cols-1 md:grid-cols-2 gap-4 gap-x-12">
+      <input type="text" placeholder="Enter Name" className="p-3 rounded-md bg-gray-700/40 text-white border border-sky-500/90 w-full" />
+      <input type="text" placeholder="Enter Contact Number" className="p-3 rounded-md bg-gray-700/40 text-white w-full border border-sky-500/90" />
+      <input type="text" placeholder="Enter Place" className="p-3 rounded-md bg-gray-700/40 text-white border border-sky-500/90 w-full" />
+      <input type="text" placeholder="Duration of Diabetes" className="p-3 rounded-md bg-gray-700/40 border border-sky-500/90 text-white w-full" />
     </div>
     <button className="mt-6 bg-yellow-500 text-black px-6 py-3 rounded-md font-bold hover:bg-yellow-600">
       Book an Appointment
@@ -77,40 +84,41 @@ function App() {
 </section>
       
       {/* About Doctor Section */}
-<section className="flex flex-col items-center bg-gray-800 pt-10 text-center px-6 md:px-0">
+<section className="flex flex-col -mt-20 items-center bg-[#08081b] pt-10 text-center px-6 md:px-0">
   <motion.div 
     initial={{ opacity: 0, y: 50 }} 
     animate={{ opacity: 1, y: 0 }} 
     transition={{ duration: 0.8 }}
-    className="bg-gray-900 border-b-4 border-yellow-500 rounded-xl w-full max-w-3xl p-6"
+    className="bg-[#15243b] border-b-12 border-yellow-500 w-full max-w-6xl p-6"
   >
     <div className="flex flex-col md:flex-row items-center md:justify-between">
       <div className="text-center md:text-left md:w-2/3">
-        <h2 className="text-2xl md:text-3xl font-bold">By Dr. Sai Vigneshvar</h2>
-        <p className="text-gray-400 text-lg md:text-xl font-semibold mt-2">
-          Consultant - Internal medicine and advanced diabetology
+        <h2 className="text-2xl md:text-5xl md:ml-24 font-bold">By Dr. Sai Vigneshvar</h2>
+        <p className="text-gray-400 md:ml-24 text-lg md:text-2xl font-semibold mt-2">
+          Consultant - Internal medicine <p> and advanced diabetology</p>
         </p>
       </div>
-      <img src={doctorImage} alt="Doctor" className="w-48 h-48 md:w-64 md:h-64 object-cover object-top mt-4 md:mt-0" />
+      <div className='bg-blue-800  hidden md:block text-blue-800 p-24 px-28 absolute right-[455px] z-10 rounded-full'>-</div>
+      <img src={doctorImage} alt="Doctor" className="w-48 z-20 h-48 md:w-96 md:-mt-44 -mb-6 md:h-96 object-cover object-top " />
     </div>
   </motion.div>
 
   {/* Stats Section */}
-  <div className="bg-yellow-500 w-full mb-10  grid grid-cols-1 md:grid-cols-3 gap-4 text-black text-center mt-6 rounded-lg md:rounded-none">
+  <div className="bg-yellow-500 w-full mb-10 md:px-80 grid grid-cols-1 md:grid-cols-3 text-black mt-6 rounded-lg md:rounded-none">
     <div className="p-6 rounded-md">
-    <p>For over</p>
+    <p className='md:-translate-x-3'>For over</p>
       <h3 className="font-bold text-5xl md:text-7xl">5+</h3>
-      <p className='text-lg md:text-xl'>Years</p>
+      <p className='text-lg md:text-xl md:-translate-x-5'>Years</p>
     </div>
     <div className="p-6 rounded-md">
-    <p>I've Treated</p>
+    <p className='md:-translate-x-22'>I've Treated</p>
       <h3 className="font-bold text-5xl md:text-7xl">10,000+</h3>
-      <p className='text-lg md:text-xl'>Diabetic patients treated</p>
+      <p className='text-lg md:text-xl md:-translate-x-5'>Diabetic patients treated</p>
     </div>
     <div className="p-6 rounded-md">
-      <p>To Reduce HbA1c from 10%</p>
+      <p className='md:-translate-x-13'>To Reduce HbA1c from 10%</p>
       <h3 className="font-bold text-5xl md:text-7xl">To ≤6.5%</h3>
-      <p className='text-lg md:text-xl'>Effortlessly</p>
+      <p className='text-lg md:text-xl md:-translate-x-25'>Effortlessly</p>
     </div>
   </div>
 </section>
@@ -118,16 +126,16 @@ function App() {
 
     
       {/* Benefits Section */}
-      <section className="py-24 bg-gray-900">
+      <section className="py-24 bg-[#08081b]">
         <div className="max-w-7xl mx-auto px-6">
           <motion.h2 
             initial="hidden"
             whileInView="visible"
             variants={fadeIn}
             viewport={{ once: true }}
-            className="md:text-5xl text-2xl font-semibold text-center text-transparent bg-clip-text bg-white mb-20"
+            className="md:text-3xl my-5 text-2xl font-semibold text-center text-transparent bg-clip-text bg-white mb-20"
           >
-            Now, I’ve Created
+              <p className='my-5'>Now, I’ve Created</p>
             <p className='text-5xl'>The Simple <span className='text-yellow-500 font-bold'>Diabetes Care Plan</span></p>
             <p className='text-xl mt-6 font-normal w-96 justify-self-center'>An easy and effective approach designed for your everyday life that helps you</p>
           </motion.h2>
@@ -137,25 +145,25 @@ function App() {
     {
       title: "Take Back Control of Your Health",
       desc: "Learn how to manage your sugar levels naturally without feeling overwhelmed or confused.",
-      icon: MdOutlineHealthAndSafety
+      icon: icon1
     },
     {
       title: "Fit Diabetes Care into Your Daily Routine",
       desc: "Know what to eat (yes, even dosa or rice!), when to check your sugar, and how to make simple changes that work.",
-      icon: TbRulerMeasure
+      icon: icon2
     },
     {
       title: "Improve Your Energy for Family & Work",
       desc: "Wake up feeling active and fresh with practical tips that suit South Indian habits—from cooking oil choices to walking routines.",
-      icon: GiHealthNormal
+      icon: icon3
     },
     {
       title: "Feel Confident About Your Food & Health Choices",
       desc: "Wake up feeling active and fresh with practical tips that suit South Indian habits—from cooking oil choices to walking routines.",
-      icon: RiMentalHealthFill
+      icon: icon4
     }
   ].map((item, index) => {
-    const IconComponent = item.icon; // Store the icon component in a variable
+    
     
     return (
       <motion.div
@@ -166,13 +174,13 @@ function App() {
         viewport={{ once: true }}
         transition={{ delay: index * 0.1 }}
         whileHover={{ y: -10 }}
-        className="bg-blue-800 border border-white/50 p-8 rounded-2xl flex gap-6 shadow-xl border border-gray-700"
+        className="bg-[#1a1ac1] border border-white/50 p-8 rounded-2xl flex gap-6 shadow-xl border border-gray-700"
       >
-        <div className="text-4xl my-auto text-yellow-400">
-          <IconComponent className="h-10 w-10" /> {/* Render the icon component */}
+        <div className=" my-auto text-yellow-400">
+          <img src={item.icon} className='w-32'/>
         </div>
-        <div>
-          <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>
+        <div className='max-w-sm md:ml-12'>
+          <h3 className="text-3xl text-white mb-4">{item.title}</h3>
           <p className="text-blue-100">{item.desc}</p>
         </div>
       </motion.div>
@@ -183,7 +191,7 @@ function App() {
       </section>
 
       {/* Questionnaire Section */}
-      <section className="py-24 bg-gray-800">
+      <section className="py-24 bg-[#08081b]">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <motion.div 
             initial="hidden"
@@ -191,8 +199,8 @@ function App() {
             variants={fadeIn}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-yellow-500 mb-6">But First...</h2>
-            <h3 className="text-3xl md:text-6xl text-white mb-16">I Want to Ask You a Few Questions</h3>
+            <h2 className="text-4xl md:text-4xl mb-3">But First...</h2>
+            <h3 className="text-3xl md:text-6xl font-semibold text-white mb-16">I Want to Ask You a <p className=' text-transparent bg-clip-text bg-yellow-500'> Few Questions </p></h3>
             
             <div className="text-left space-y-8 mb-16">
               {[
@@ -211,10 +219,10 @@ function App() {
                   variants={fadeIn}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
-                  className="flex items-start bg-gray-700 p-6 rounded-xl border border-gray-600"
+                  className="flex items-start bg-[#15243b] p-6 "
                 >
-                  <div className="bg-gradient-to-br from-yellow-400 to-yellow-900 rounded-md w-12 h-12 text-2xl flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                    <span className="text-white font-bold">?</span>
+                  <div className="bg-[#EEB600] rounded-md w-12 h-12 text-5xl flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                    <span className="text-white font-semibold">?</span>
                   </div>
                   <p className="text-xl text-white">{question}</p>
                 </motion.div>
@@ -224,7 +232,7 @@ function App() {
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(156, 241, 99, 0.08)" }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-yellow-400/50 to-yellow-900 text-white px-10 py-4 rounded-xl font-bold text-xl shadow-xl hover:shadow-2xl transition-all"
+              className="bg-[#eeb600] text-black px-24 py-4 rounded-sm font-bold text-xl shadow-xl hover:shadow-2xl transition-all"
             >
               Book an Appointment
             </motion.button>
@@ -233,40 +241,40 @@ function App() {
       </section>
 
       {/* Services Section */}
-<section className="py-16 md:py-24 bg-gray-900">
-  <div className="max-w-7xl mx-auto px-6">
+<section className="py-16 md:py-24 -mt-24 bg-[#08081b]">
+  <div className="max-w-6xl mx-auto px-6">
     <motion.div 
       initial="hidden"
       whileInView="visible"
       variants={fadeIn}
       viewport={{ once: true }}
     >
-      <h2 className="text-3xl md:text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-900 mb-8">
+      <h2 className="text-3xl md:text-5xl font-semibold text-center  mb-8">
         What We Offer
       </h2>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 mt-10">
+      <div className="grid grid-cols-1 md:mx-32 sm:grid-cols-2 lg:grid-cols-1 gap-6 mt-10">
         {[
           {
             title: "Personalized Diabetes Management",
             desc: "We focus on tailored care plans that fit your unique health needs, ensuring better control over blood sugar levels and overall wellness.",
-            icon: FaUserMd
+            icon: icon5
           },
           {
             title: "Blood Sugar Optimization",
             desc: "Through innovative methods, we help reduce blood sugar levels naturally, making lasting improvements to your health.",
-            icon: FaChartLine
+            icon: icon6
           },
           {
             title: "Lifestyle & Diet Guidance",
             desc: "We provide expert advice on nutrition, exercise, and mental health to support a holistic approach to managing diabetes.",
-            icon: FaAppleAlt
+            icon: icon7
           },
           {
             title: "Online Consultations & Follow-ups",
             desc: "Book appointments and get consultations from the comfort of your home, with regular follow-ups to monitor your progress.",
-            icon: FaLaptopMedical
+            icon: icon8
           }
         ].map((service, index) => {
           const IconComponent = service.icon;
@@ -283,11 +291,11 @@ function App() {
               className="bg-gradient-to-r from-yellow-500 to-white flex gap-6 md:gap-10 p-6 md:p-8 rounded-2xl shadow-xl border border-gray-700 hover:border-yellow-500 transition-all w-full"
             >
               <div className="text-3xl md:text-4xl text-black">
-                <IconComponent className="h-8 w-8 md:h-10 md:w-10" />
+              <img src={service.icon} className='w-16'/>
               </div>
               <div>
                 <h3 className="text-xl md:text-2xl font-bold text-black mb-2">{service.title}</h3>
-                <p className="text-black text-sm md:text-base">{service.desc}</p>
+                <p className="text-black max-w-xl text-sm md:text-base">{service.desc}</p>
               </div>
             </motion.div>
           );
@@ -297,9 +305,8 @@ function App() {
       {/* Book Consultation Button */}
       <div className="text-center mt-12 md:mt-16">
         <motion.button
-          whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(107, 128, 32, 0.29)" }}
           whileTap={{ scale: 0.95 }}
-          className="bg-gradient-to-r from-yellow-400/50 to-yellow-900 text-white px-6 md:px-10 py-3 md:py-4 rounded-xl font-bold text-lg md:text-xl shadow-xl hover:shadow-2xl transition-all"
+          className="bg-[#1a1ac1] text-white px-6 md:px-24 py-3 md:py-4 rounded-sm font-bold text-lg md:text-xl shadow-xl hover:shadow-2xl transition-all"
         >
           Book a Consultation
         </motion.button>
@@ -309,7 +316,7 @@ function App() {
 </section>
 
       {/* Comparison Section */}
-      <section className="py-24 bg-gray-800">
+      <section className="py-24 bg-[#08081b]">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div 
             initial="hidden"
@@ -318,57 +325,63 @@ function App() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl md:max-w-3/4 justify-self-center font-semibold text-center text-white mb-20">
-              What <span className='text-yellow-500'>Will Change</span> After You Start with Us?
+               <p className='text-white mb-2'> What <span className='text-yellow-500'> Will Change </span> After</p>  You Start with Us?
             </h2>
             
-            <div className="overflow-x-auto">
-              <table className="w-full ">
-                <thead>
-                  <tr>
-                    <th className="py-6 bg-gray-800 px-8 text-left border border-white text-white text-xl font-bold">Old Self</th>
-                    <th className="py-6 px-8 bg-gradient-to-r from-blue-900 to-purple-900 text-left text-white text-xl border border-white font-bold">New Self</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    {
-                      old: "Struggling with high blood sugar",
-                      new: "Enjoying steady, balanced blood sugar"
-                    },
-                    {
-                      old: "Feeling tired and sluggish all the time",
-                      new: "Feeling more energetic and refreshed"
-                    },
-                    {
-                      old: "Worried about future health problems",
-                      new: "Confident and clear on managing your diabetes"
-                    },
-                    {
-                      old: "Constantly thinking about medication",
-                      new: "Living without the constant worry, with fewer meals"
-                    },
-                    {
-                      old: "Feeling overwhelmed by diabetes",
-                      new: "Feeling in control and empowered to take care of your health"
-                    }
-                  ].map((row, index) => (
-                    <tr 
-                      key={index} 
-                      className={index % 2 === 0 ? "bg-gray-700" : "bg-gray-700"}
-                    >
-                      <td className="py-5 border border-white px-8 text-white border-b border-gray-600 text-lg">{row.old}</td>
-                      <td className="py-5 px-8 border border-white bg-gradient-to-r from-blue-900 to-purple-900 text-white border-b border-gray-600 font-medium text-lg">{row.new}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+            <div className="rounded-xl border overflow-x-auto">
+  <table className="w-full border-collapse">
+    <thead>
+      <tr>
+        <th className="w-1/2 py-6 bg-[#15243B] text-center border border-white text-white text-xl font-bold">
+          Old Self
+        </th>
+        <th className="w-1/2 py-6 bg-[#1a1ac1] text-center text-white text-xl border border-white font-bold">
+          New Self
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {[
+        {
+          old: "Struggling with high blood sugar",
+          new: "Enjoying steady, balanced blood sugar"
+        },
+        {
+          old: "Feeling tired and sluggish all the time",
+          new: "Feeling more energetic and refreshed"
+        },
+        {
+          old: "Worried about future health problems",
+          new: "Confident and clear on managing your diabetes"
+        },
+        {
+          old: "Constantly thinking about medication",
+          new: "Living without the constant worry, with fewer meals"
+        },
+        {
+          old: "Feeling overwhelmed by diabetes",
+          new: "Feeling in control and empowered to take care of your health"
+        }
+      ].map((row, index) => (
+        <tr key={index} className="bg-gray-700">
+          <td className="w-1/2 md:pl-24 py-5 px-8 border bg-[#15243B] border-white text-white text-left text-lg">
+            {row.old}
+          </td>
+          <td className="w-1/2 py-5 md:pl-24 px-8 border bg-[#1a1ac1] border-white text-white text-left text-lg font-medium">
+            {row.new}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
           </motion.div>
         </div>
       </section>
 
       {/* Target Audience Section */}
-      <section className="py-24 bg-gray-900">
+      <section className="py-24 bg-[#15243B]">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div 
             initial="hidden"
@@ -381,29 +394,70 @@ function App() {
             <div className="mt-10">
               <div>
                
-                <ul className="space-y-6 md:ml-32">
-                  {[
-                    "Have Type 1 or Type 2 diabetes and struggle to keep their blood sugar under control.",
-                    "Are dealing with high HbA/c levels and are concerned about the long-term effects of diabetes",
-                    "Pregnant female diagnosed with diabetes mellitus",
-                    "Feel overwhelmed managing diabetes along with family, work, and daily responsibilities.",
-                    "Are tired of feeling tired, sluggish, or worried about the complications of diabetes.",
-                    "Want to take control of their health but are unsure where to start or what advice to trust.",
-                    "Have tried various treatments without seeing the results they hoped for and are looking for a personalised, proven approach."
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start">
-                      <div className="bg-green-500 rounded-full w-6 h-6 flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                        <svg className="w-4 h-4 text-white"  viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                      <span className="text-blue-100 text-lg">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+              <ul className="space-y-6 md:ml-32">
+  {[
+    [
+      "Have ",
+      <span className="text-yellow-500 font-semibold" key="1">Type 1 or Type 2 diabetes</span>,
+      " and struggle to keep their blood sugar under control."
+    ],
+    [
+      "Are dealing with high ",
+      <span className="text-yellow-500 font-semibold" key="2">HbA1c</span>,
+      " levels and are concerned about the long-term effects of diabetes"
+    ],
+    ["Pregnant female diagnosed with diabetes mellitus"],
+    ["Feel overwhelmed managing diabetes along with family, work, and daily responsibilities."],
+    [
+      "Are tired of feeling ",
+      <span className="text-yellow-500 font-semibold" key="3">tired</span>,
+      ", sluggish, or worried about the complications of diabetes."
+    ],
+    [
+      "Want to take ",
+      <span className="text-yellow-500 font-semibold" key="4">control of their health</span>,
+      " but are unsure where to start or what advice to trust."
+    ],
+    ["Have tried various treatments without seeing the results they hoped for and are looking for a personalised, proven approach."]
+  ].map((item, index) => (
+    <li key={index} className="flex items-start">
+      <div className="bg-green-700 rounded-full w-6 h-6 flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+      <svg className="w-4 h-4 text-white fill-white" viewBox="0 0 20 20">
+    <path
+      fill="currentColor"
+      fillRule="evenodd"
+      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+      clipRule="evenodd"
+    />
+  </svg>
+      </div>
+      <span className="text-blue-100 text-lg">
+        {item.map((part, i) => <React.Fragment key={i}>{part}</React.Fragment>)}
+      </span>
+    </li>
+  ))}
+</ul>
+
               </div>
               
-              <h3 className="md:text-3xl text-3xl text-center mt-12 max-w-4xl justify-self-center  font-bold text-white mb-8">
+              </div>
+         
+          </motion.div>
+        </div>
+      </section>
+
+      <section className='bg-[#1C3050]'>
+      <div className="max-w-7xl bg-[#1C3050] mx-auto px-6">
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeIn}
+            viewport={{ once: true }}
+          >
+
+      <div className='bg-[#1C3050] pb-20'>
+              
+              <h3 className="md:text-5xl text-3xl text-center py-12 max-w-4xl justify-self-center  font-bold text-white mb-8">
               I Want You to Know the Cost of Ignoring Your Health
                 </h3>
               <div>
@@ -419,19 +473,18 @@ function App() {
                       <svg className="w-6 h-6 text-red-500 mr-4 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
                       </svg>
-                      <span className="text-red-200 text-lg">{item}</span>
+                      <span className="text-white text-lg">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
               </div>
-         
-          </motion.div>
+              </motion.div>
         </div>
       </section>
 
       {/* Doctor Profile Section */}
-<section className="py-24 bg-[#121A56] text-white relative">
+<section className="py-24 bg-[#1a1ac1] text-white relative">
   <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
     {/* Left Text Section */}
     <div className="md:w-1/2 ">
@@ -464,22 +517,22 @@ function App() {
   <div className="max-w-3xl mx-5 md:absolute -mb-64 right-44 -translate-y-44 bg-white text-black rounded-lg p-6 mt-8 shadow-lg flex flex-col space-y-4">
     <ul className="space-y-3 text-lg">
       <li className="flex items-center gap-3">
-        <span className="text-yellow-500 font-bold">•</span> <span><strong>5+ Years of Experience</strong> in treating diabetes</span>
+        <span className="text-black font-bold">•</span> <span><strong>5+ Years of Experience</strong> in treating diabetes</span>
       </li>
       <li className="flex items-center gap-3">
-        <span className="text-yellow-500 font-bold">•</span> <span><strong>10,000+ patients</strong> treated with a focus on holistic care</span>
+        <span className="text-black font-bold">•</span> <span><strong>10,000+ patients</strong> treated with a focus on holistic care</span>
       </li>
       <li className="flex items-center gap-3">
-        <span className="text-yellow-500 font-bold">•</span> <span><strong>Proven track record</strong> in reducing HbA1c and managing blood sugar levels</span>
+        <span className="text-black font-bold">•</span> <span><strong>Proven track record</strong> in reducing HbA1c and managing blood sugar levels</span>
       </li>
       <li className="flex items-center gap-3">
-        <span className="text-yellow-500 font-bold">•</span> <span><strong>Personalized treatment</strong> tailored to your specific health needs</span>
+        <span className="text-black font-bold">•</span> <span><strong>Personalized treatment</strong> tailored to your specific health needs</span>
       </li>
     </ul>
   </div>
 </section>
 
-<section className="py-24 bg-gray-900 text-white">
+<section className="py-24 bg-[#08081b] text-white">
       <div className="max-w-5xl mx-auto px-6">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-16">
           Frequently Asked Questions
@@ -488,7 +541,7 @@ function App() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700"
+              className="shadow-lg overflow-hidden border-t-2 border-white"
             >
               <button
                 onClick={() => toggleFAQ(index)}
