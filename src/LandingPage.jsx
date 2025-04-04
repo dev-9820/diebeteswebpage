@@ -17,6 +17,8 @@ import icon7 from "./assets/icon7.png"
 import icon8 from "./assets/icon8.png"
 import React from 'react';
 import axios from "axios"
+import {useNavigate} from "react-router-dom"
+
 const faqs = [
   {
     question: "What are the prerequisites for enrolling in the law course?",
@@ -42,6 +44,7 @@ const faqs = [
 
 
 function LandingPage() {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('home');
   const [openIndex, setOpenIndex] = useState(null);
   const [formData, setFormData] = useState({
@@ -286,7 +289,8 @@ function LandingPage() {
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(156, 241, 99, 0.08)" }}
               whileTap={{ scale: 0.95 }}
-              className="bg-[#eeb600] text-black px-24 py-4 rounded-sm font-bold text-xl shadow-xl hover:shadow-2xl transition-all"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="bg-[#eeb600] text-black px-24 py-4 rounded-sm font-bold text-md shadow-xl hover:shadow-2xl transition-all"
             >
               Book an Appointment
             </motion.button>
@@ -360,6 +364,7 @@ function LandingPage() {
       <div className="text-center mt-12 md:mt-16">
         <motion.button
           whileTap={{ scale: 0.95 }}
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="bg-[#1a1ac1] text-white px-6 md:px-24 py-3 md:py-4 rounded-sm font-bold text-lg md:text-xl shadow-xl hover:shadow-2xl transition-all"
         >
           Book a Consultation
@@ -552,7 +557,7 @@ function LandingPage() {
       <p className="text-lg mb-4 text-justify">
         Together, we'll rewrite your health story. Join me on this transformative journey and let's create a path to healthier living, free from the fear and complications of diabetes.
       </p>
-      <button className="bg-yellow-400  text-black px-6 py-3 rounded-lg font-bold text-lg hover:bg-yellow-500 transition">
+      <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="bg-yellow-400  text-black px-6 py-3 rounded-lg font-bold text-lg hover:bg-yellow-500 transition">
         Book a Consultation
       </button>
     </div>
@@ -613,7 +618,7 @@ function LandingPage() {
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
                   exit={{ opacity: 0, height: 0 }}
-                  className="p-6 border-t border-gray-700 text-gray-300"
+                  className="p-6 text-gray-300"
                 >
                   {faq.answer}
                 </motion.div>
