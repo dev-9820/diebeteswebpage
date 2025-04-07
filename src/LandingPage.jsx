@@ -18,28 +18,42 @@ import icon8 from "./assets/icon8.png"
 import React from 'react';
 import axios from "axios"
 import {useNavigate} from "react-router-dom"
+import option1 from "./assets/ogphoto-removebg.png"
+import option2 from "./assets/ogphoto2-removebg.png"
+import option3 from "./assets/ogphoto3-removebg.png"
+import option4 from "./assets/ogphoto4-removebg.png"
+import option5 from "./assets/ogphoto5-removebg.png"
+import option6 from "./assets/ogphoto6-removebg.png"
+import option7 from "./assets/ogphoto7-removebg.png"
+import option8 from "./assets/ogphoto8-removebg.png"
 
+import { Helmet } from 'react-helmet-async';
+import { option } from 'framer-motion/client';
 const faqs = [
   {
-    question: "What are the prerequisites for enrolling in the law course?",
-    answer: "There are no specific prerequisites for this law course, but a background in humanities or social sciences is beneficial. Applicants must have completed high school or hold an equivalent diploma.",
+    question: "How is this different from other diabetes treatments I’ve tried?",
+    answer: "Unlike one-size-fits-all approaches, our Simple Diabetes Care Plan is personalized, rooted in your lifestyle, and designed to help you manage diabetes without drastic changes or confusion.",
   },
   {
-    question: "How long is the course, and what is the time commitment?",
-    answer: "The course duration varies depending on the specific program, but most students complete it within a few months to a year with part-time study.",
+    question: "Can I really reduce my HbA1c without taking more medicines?",
+    answer: "Yes! Many of our patients have successfully reduced their HbA1c with a balanced mix of diet, lifestyle changes, and proper guidance—sometimes even reducing their medication load under medical supervision.",
   },
   {
-    question: "Is the course available online, or do I need to attend in person?",
-    answer: "This course is available online, allowing students to study at their own pace from anywhere in the world.",
+    question: "Will I have to give up my favorite foods like rice or dosa?",
+    answer: "Not at all. We help you enjoy South Indian staples like dosa, rice, and idli—smartly and in moderation—without guilt or spikes in blood sugar.",
   },
   {
-    question: "Will I receive a certificate or qualification upon completion?",
-    answer: "Yes, upon successful completion, you will receive a certificate that can enhance your career opportunities.",
+    question: "What happens during the first consultation?",
+    answer: " We’ll understand your medical history, current sugar levels, lifestyle, and goals. Based on that, we’ll create a plan that’s clear, achievable, and designed for YOU.",
   },
   {
-    question: "What topics are covered in the law course?",
-    answer: "The course covers various legal principles, case studies, contract law, criminal law, and constitutional law.",
+    question: "Is this consultation available online?",
+    answer: "Yes! We offer online consultations and follow-ups, so you can access care from the comfort of your home—no travel or waiting rooms needed.",
   },
+  {
+    question: "Can pregnant women with diabetes join this program?",
+    answer: "Absolutely. We provide safe, guided care for pregnant women diagnosed with gestational or pre-existing diabetes."
+  }
 ];
 
 
@@ -84,6 +98,7 @@ function LandingPage() {
 
   return (
     <div className="font-sans bg-[#08081b] text-gray-100 min-h-screen">
+      
      {/* Hero Section */}
 <section className="px-6 py-32 md:py-12 flex items-center min-h-screen">
   <motion.div 
@@ -155,8 +170,8 @@ function LandingPage() {
           Consultant - Internal medicine <p> and advanced diabetology</p>
         </p>
       </div>
-      <div className='bg-blue-800  hidden md:block text-blue-800 p-24 px-28 absolute right-[455px] z-10 rounded-full'>-</div>
-      <img src={doctorImage} alt="Doctor" className="w-48 z-20 h-48 md:w-96 md:-mt-44 -mb-6 md:h-96 object-cover object-top " />
+      <div className='bg-blue-800 md:block text-blue-800 p-10 px-12 right-38 translate-y-45 md:translate-y-2  md:p-24 md:px-28 absolute md:right-[455px] z-10 rounded-full'>-</div>
+      <img src={option8} alt="Doctor" style={{ filter: 'drop-shadow(0 10px 10px rgba(0, 0, 0, 0.3))' }} className="w-48 z-20 h-48 md:w-96 md:-mt-44 -mb-6 md:h-96 object-cover object-top " />
     </div>
   </motion.div>
 
@@ -564,11 +579,12 @@ function LandingPage() {
     
     {/* Right Image Section */}
     <div className="md:w-1/2 flex justify-center relative">
-      <img 
-        src={doctorImage} 
-        alt="Dr. Sai Vigneshvar" 
-        className="w-96 h-96 mb-32 rounded-xl object-cover object-top"
-      />
+    <img 
+  src={option3} 
+  alt="Dr. Sai Vigneshvar" 
+  className="w-120 h-120 mb-12 rounded-xl object-cover object-top"
+  style={{ filter: 'drop-shadow(0 10px 10px rgba(0, 0, 0, 0.6))' }}
+/>
     </div>
   </div>
 
