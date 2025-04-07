@@ -170,29 +170,29 @@ function LandingPage() {
           Consultant - Internal medicine <p> and advanced diabetology</p>
         </p>
       </div>
-      <div className='bg-blue-800 md:block text-blue-800 p-10 px-12 right-38 translate-y-45 md:translate-y-2  md:p-24 md:px-28 absolute md:right-[455px] z-10 rounded-full'>-</div>
+      <div className='bg-blue-800 md:block text-blue-800 p-10 px-12 right-34 translate-y-45 md:translate-y-2  md:p-24 md:px-28 absolute md:right-[455px] z-10 rounded-full'>-</div>
       <img src={option8} alt="Doctor" style={{ filter: 'drop-shadow(0 10px 10px rgba(0, 0, 0, 0.3))' }} className="w-48 z-20 h-48 md:w-96 md:-mt-44 -mb-6 md:h-96 object-cover object-top " />
     </div>
   </motion.div>
 
   {/* Stats Section */}
-  <div className="bg-yellow-500 w-full mb-10 md:px-80 grid grid-cols-1 md:grid-cols-3 text-black mt-6 rounded-lg md:rounded-none">
-    <div className="p-6 rounded-md">
-    <p className='md:-translate-x-3'>For over</p>
-      <h3 className="font-bold text-5xl md:text-7xl">5+</h3>
-      <p className='text-lg md:text-xl md:-translate-x-5'>Years</p>
-    </div>
-    <div className="p-6 rounded-md">
-    <p className='md:-translate-x-22'>I've Treated</p>
-      <h3 className="font-bold text-5xl md:text-7xl">10,000+</h3>
-      <p className='text-lg md:text-xl md:-translate-x-5'>Diabetic patients treated</p>
-    </div>
-    <div className="p-6 rounded-md">
-      <p className='md:-translate-x-13'>To Reduce HbA1c from 10%</p>
-      <h3 className="font-bold text-5xl md:text-7xl">To ≤6.5%</h3>
-      <p className='text-lg md:text-xl md:-translate-x-25'>Effortlessly</p>
-    </div>
+<div className="bg-yellow-500 w-full mb-10  md:px-12 lg:pl-96 grid grid-cols-1 md:grid-cols-3 text-black mt-6 rounded-lg md:rounded-none text-center md:text-left">
+  <div className="p-6">
+    <p>For over</p>
+    <h3 className="font-bold text-5xl md:text-7xl">5+</h3>
+    <p className="text-lg md:text-xl">Years</p>
   </div>
+  <div className="p-6">
+    <p>I've Treated</p>
+    <h3 className="font-bold text-5xl md:text-7xl">10,000+</h3>
+    <p className="text-lg md:text-xl">Diabetic patients treated</p>
+  </div>
+  <div className="p-6">
+    <p>To Reduce HbA1c from 10%</p>
+    <h3 className="font-bold text-5xl md:text-6xl">To ≤6.5%</h3>
+    <p className="text-lg md:text-xl">Effortlessly</p>
+  </div>
+</div>
 </section>
 
 
@@ -302,13 +302,13 @@ function LandingPage() {
             </div>
             
             <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(156, 241, 99, 0.08)" }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="bg-[#eeb600] text-black px-24 py-4 rounded-sm font-bold text-md shadow-xl hover:shadow-2xl transition-all"
-            >
-              Book an Appointment
-            </motion.button>
+  whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(156, 241, 99, 0.08)" }}
+  whileTap={{ scale: 0.95 }}
+  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+  className="bg-[#eeb600] text-black px-12 sm:px-16 md:px-20 lg:px-24 py-4 rounded-sm font-bold text-2xl shadow-xl hover:shadow-2xl transition-all whitespace-nowrap"
+>
+  Book an Appointment
+</motion.button>
           </motion.div>
         </div>
       </section>
