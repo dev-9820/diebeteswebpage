@@ -68,8 +68,12 @@ function LandingPage() {
     duration: "",
   });
   const [message, setMessage] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
+  };
+  const handleClose = () => {
+    setShowPopup(false);
   };
 
   const handleChange = (e) => {
@@ -82,10 +86,12 @@ function LandingPage() {
     try {
       const res = await axios.post("https://diabetesbackend.onrender.com/api/consultations", formData);
       setMessage("Appointment booked successfully!");
+      setShowPopup(true)
       setFormData({ name: "", contact: "", place: "", duration: "" }); // Clear form
     } catch (error) {
       console.error("Error submitting form", error);
       setMessage("Failed to book appointment. ❌");
+      
     }
   };
 
@@ -98,6 +104,25 @@ function LandingPage() {
 
   return (
     <div className="font-sans bg-[#08081b] text-gray-100 min-h-screen">
+
+      {showPopup && (
+      <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
+        <div className="bg-white rounded-2xl shadow-xl p-6 max-w-xs w-full text-center">
+          <h2 className="text-xl font-semibold text-gray-800 mb-4">
+            Appointment booked successfully!
+          </h2>
+          <p className="text-gray-600 mb-6">
+            You will receive a call from our team shortly.
+          </p>
+          <button
+            onClick={handleClose}
+            className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 px-6 rounded-full transition duration-200"
+          >
+            Ok
+          </button>
+        </div>
+      </div>
+      )}
       
      {/* Hero Section */}
 <section className="px-6 py-32 md:py-12 flex items-center min-h-screen">
@@ -140,18 +165,26 @@ function LandingPage() {
             className="p-3 rounded-md bg-gray-700/40 text-white border border-sky-500/90 w-full" />
 
 
-      <input type="text"
-            name="duration"
-            placeholder="Duration of Diabetes"
-            value={formData.duration}
-            onChange={handleChange}
-            className="p-3 rounded-md bg-gray-700/40 border border-sky-500/90 text-white w-full" />
+<select
+  name="duration"
+  value={formData.duration}
+  onChange={handleChange}
+  className="p-3 rounded-md bg-gray-700/40 border border-sky-500/90 text-white w-full"
+>
+  <option value="">Select Duration</option>
+  <option value="0 - 6 months" className='text-black'>0 - 6 months</option>
+  <option value="6 months - 1 year" className='text-black'>6 months - 1 year</option>
+  <option value="1-3 years" className='text-black'>1-3 years</option>
+  <option value="3-5 years" className='text-black'>3-5 years</option>
+  <option value="Above 5 years" className='text-black'>Above 5 years</option>
+</select>
+
 
     </div>
     <button onClick={()=> handleSubmit()} className="mt-6 bg-yellow-500 text-black px-6 py-3 rounded-md font-bold hover:bg-yellow-600">
       Book an Appointment
     </button>
-    {message && <p className="mt-4 text-lg font-semibold text-gray-300">{message}</p>}
+    {/* {message && <p className="mt-4 text-lg font-semibold text-gray-300">{message}</p>} */}
   </motion.div>
 </section>
       
@@ -255,12 +288,26 @@ function LandingPage() {
           <h3 className="text-3xl text-white mb-4">{item.title}</h3>
           <p className="text-blue-100">{item.desc}</p>
         </div>
+        
       </motion.div>
     );
+    
   })}
+  
 </div>
         </div>
       </section>
+
+      <div className='flex justify-center'>
+      <motion.button
+  whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(156, 241, 99, 0.08)" }}
+  whileTap={{ scale: 0.95 }}
+  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+  className="bg-[#eeb600] text-black -mt-12 px-6 md:px-24 py-3 md:py-4 rounded-sm font-bold text-lg md:text-xl shadow-xl hover:shadow-2xl transition-all whitespace-nowrap"
+>
+  Book an Appointment
+</motion.button>
+      </div>
 
       {/* Questionnaire Section */}
       <section className="py-24 bg-[#08081b]">
@@ -305,7 +352,7 @@ function LandingPage() {
   whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(156, 241, 99, 0.08)" }}
   whileTap={{ scale: 0.95 }}
   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-  className="bg-[#eeb600] text-black px-12 sm:px-16 md:px-20 lg:px-24 py-4 rounded-sm font-bold text-2xl shadow-xl hover:shadow-2xl transition-all whitespace-nowrap"
+  className="bg-[#eeb600] text-black px-6 md:px-24 py-3 md:py-4 rounded-sm font-bold text-lg md:text-xl shadow-xl hover:shadow-2xl transition-all whitespace-nowrap"
 >
   Book an Appointment
 </motion.button>
@@ -382,7 +429,7 @@ function LandingPage() {
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="bg-[#1a1ac1] text-white px-6 md:px-24 py-3 md:py-4 rounded-sm font-bold text-lg md:text-xl shadow-xl hover:shadow-2xl transition-all"
         >
-          Book a Consultation
+          Book an Appointment
         </motion.button>
       </div>
     </motion.div>
@@ -453,6 +500,16 @@ function LandingPage() {
           </motion.div>
         </div>
       </section>
+      <div className='flex justify-center'>
+      <motion.button
+  whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(156, 241, 99, 0.08)" }}
+  whileTap={{ scale: 0.95 }}
+  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+  className="bg-[#eeb600] text-black mb-6 -mt-12 px-6 md:px-24 py-3 md:py-4 rounded-sm font-bold text-lg md:text-xl shadow-xl hover:shadow-2xl transition-all whitespace-nowrap"
+>
+  Book an Appointment
+</motion.button>
+      </div>
 
       {/* Target Audience Section */}
       <section className="py-24 bg-[#15243B]">
@@ -532,7 +589,7 @@ function LandingPage() {
       <div className='bg-[#1C3050] pb-20'>
               
               <h3 className="md:text-5xl text-3xl text-center py-12 max-w-4xl justify-self-center  font-bold text-white mb-8">
-              I Want You to Know the Cost of Ignoring Your Health
+                I Want You to Know the Cost of Ignoring Your Health
                 </h3>
               <div>
                 
@@ -573,7 +630,7 @@ function LandingPage() {
         Together, we'll rewrite your health story. Join me on this transformative journey and let's create a path to healthier living, free from the fear and complications of diabetes.
       </p>
       <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="bg-yellow-400  text-black px-6 py-3 rounded-lg font-bold text-lg hover:bg-yellow-500 transition">
-        Book a Consultation
+        Book an Appointment
       </button>
     </div>
     
@@ -645,6 +702,16 @@ function LandingPage() {
       </div>
     </section>
 
+    <div className='flex justify-center'>
+      <motion.button
+  whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(156, 241, 99, 0.08)" }}
+  whileTap={{ scale: 0.95 }}
+  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+  className="bg-[#eeb600] text-black mb-6 -mt-12 px-6 md:px-24 py-3 md:py-4 rounded-sm font-bold text-lg md:text-xl shadow-xl hover:shadow-2xl transition-all whitespace-nowrap"
+>
+  Book an Appointment
+</motion.button>
+      </div>
      
     </div>
   );
